@@ -112,7 +112,7 @@ a:after {
 }
 
 .navbar-inverse {
-	/*padding-bottom: 70px;*/
+	padding-bottom: 70px;
 	padding-top: 70px;
 }
 
@@ -172,26 +172,10 @@ a:after {
 
 #ww {
 	/*padding-top: 20px;*/
-	/*margin-top:130px;*/
-	padding-top: 50px;
-	padding-bottom: 70px;
+	padding-bottom: 100px;
 	background-color: #990000;
-	/*height:40%;*/
+/*height:40%;*/
 }
-
-.ww-scrolled {
-	margin-top: 130px;
-}
-
-.navbar-scrolled {
-	padding-top: 0px;
-}
-
-/*.navbar-scrolled {
-
-}*/
-/*I need to add a class to add the top margin*/ 
-/*need to add a class to navbar to make it fixed when it scrolls some.*/
 
 
 
@@ -259,6 +243,34 @@ bt {
 	font-size: 12px;
 }
 
+/* ================== PORTFOLIO IMAGES HOVER EFFECT ================== */
+/* Effects also are controled by hover.zoom.js */
+.zoom { 
+    display:block; 
+    position:relative; 
+    overflow:hidden; 
+    background:transparent url(../img/loader.gif) no-repeat center;
+}
+
+
+    .zoomOverlay {
+        position:absolute;
+        top:0; left:0;
+        bottom:0; right:0;
+        display:none;
+        background-image:url(../img/zoom.png);
+        background-repeat:no-repeat;
+        background-position:center;
+    }
+
+.zoom2 {
+	opacity: 1;
+}
+
+.zoom2:hover {
+	opacity: 0.5;
+}
+
 /* glyphicon Configuration */
 
 .glyphicon {
@@ -267,17 +279,108 @@ bt {
 }
 
 .divider{
-	padding-top:30px;
+	padding-top:50px;
 }
-#logo{
 
-	background-image: url("../img/nashLogo.png");
-	width:300px;
-	/*background-image: url("../img/nashLogoXS.png");*/
+@media (min-width: 0px) {
+    h1{
+    	font-size:1.5em;		
+    }
+
+    #ww {
+
+		padding-top:50px;
+		padding-bottom: 20px;
+		background-color: #990000;
+		/*height:20%;*/
+	}
+	.navbar-header{
+		padding-top: 0px;
+		padding-bottom: 0px;
+		height:50px;
+	}
+	.navbar-inverse {
+		padding-bottom: 0px;
+		padding-top: 0px;
+	}
+	.navbar-brand{
+		padding-bottom: 0px;
+		padding-top: 5px;
+	}
+	/*.navbar-brand {
+		background-image: url("../img/nashLogoXS.png");
 		height:40px;
-		/*width:100px;*/
+		width:100px;
+		background-repeat: no-repeat;
+	}*/
+	#logo{
+		background-image: url("../img/nashLogoXS.png");
+		height:40px;
+		width:100px;
+	}
+	.divider{
+		padding-top:10px;
+	}
+
+
+}
+/*Everything Greater than 992 pixels */
+@media (min-width: 768px) {
+    h1{
+    	font-size:3em;
+    }
+    #ww {
+
+    	padding-top:120px;
+		padding-bottom: 40px;
+		background-color: #990000;
+		/*height:25%;*/
+	}
+	.navbar-inverse {
+		padding-bottom: 30px;
+		padding-top: 30px;
+	}
+
+	#logo{
+
+		background-image: url("../img/nashLogo.png");
+		/*height:65px;*/
+		width:300px;
+	}
 }
 
+@media (min-width: 992px) {
+    h1{
+    	font-size:3em;
+    }
+    #ww {
+		padding-top:150px;
+		padding-bottom: 60px;
+		background-color: #990000;
+		/*height:30%;*/
+	}
+	.navbar-inverse {
+		padding-bottom: 40px;
+		padding-top: 40px;
+	}
+}
+@media (min-width: 1200px) {
+    h1{
+    	font-size:4.5em;
+    }
+    #ww {
+    	padding-top:200px;
+    	
+		/*	padding-top: 20px;*/
+		padding-bottom: 100px;
+		background-color: #990000;
+		/*height:40%;*/
+	}
+	.navbar-inverse {
+		padding-bottom: 70px;
+		padding-top: 70px;
+	}
+}
 
 .navbar-nav > li > a{
 	padding-top:25px;

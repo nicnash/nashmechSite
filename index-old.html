@@ -10,7 +10,11 @@
 
     <title>Nash Mechanical - HVAC </title>
 
+    <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -28,7 +32,7 @@
   <body>
 
     <!-- Static navbar -->
-    <div id="nav-scrolled" class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -43,6 +47,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="work.html">Services</a></li>
             <li><a href="about.html">About</a></li>
+            <!-- <li><a href="blog.html">Blog</a></li> -->
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -148,44 +153,33 @@ What we say
     <script src="assets/js/bootstrap.min.js"></script>
 
      <script type="text/javascript">
-		$( window ).scroll(function() {
-			//offset top of ww   offsetTop of nav bar
-			//compare with scroll y of window
-			// var wwOffset = $(".navbar").offset();
-			var windowY = window.scrollY;
+$( window ).scroll(function() {
+	//offset top of ww   offsetTop of nav bar
+	//compare with scroll y of window
+	// var wwOffset = $(".navbar").offset();
+	var windowY = window.scrollY;
 
-			console.log(windowY);
-			if(windowY > 70) {
-				$("#ww").addClass("ww-scrolled");
-				$("#nav-scrolled").addClass("navbar-fixed-top");
-				$("#nav-scrolled").addClass("navbar-scrolled");
+	if(window.outerWidth>768)
+	{
+		if (windowY>300) {
+			$(".navbar-inverse").addClass("noPadding1");
+			$("#logo").addClass("smallerLogo");
+		}
+		if (windowY>400) {
+			$(".navbar-inverse").addClass("noPadding2");
+			$("#logo").addClass("smallerLogo");
+		}
+		if (windowY<100) {
+			$(".navbar-inverse").removeClass("noPadding1");
 
-			} else {
-				$("#ww").removeClass("ww-scrolled");
-				$("#nav-scrolled").removeClass("navbar-fixed-top");
-				$("#nav-scrolled").removeClass("navbar-scrolled");
-			}
-			// if(window.outerWidth>768)
-			// {
-			// 	if (windowY>300) {
-			// 		$(".navbar-inverse").addClass("noPadding1");
-			// 		$("#logo").addClass("smallerLogo");
-			// 	}
-			// 	if (windowY>400) {
-			// 		$(".navbar-inverse").addClass("noPadding2");
-			// 		$("#logo").addClass("smallerLogo");
-			// 	}
-			// 	if (windowY<100) {
-			// 		$(".navbar-inverse").removeClass("noPadding1");
+		}
+		if (windowY<200) {
+			$(".navbar-inverse").removeClass("noPadding2");
 
-			// 	}
-			// 	if (windowY<200) {
-			// 		$(".navbar-inverse").removeClass("noPadding2");
+		}
+	}
 
-			// 	}
-			// }
-
-		});
+});
 
 
     </script>
